@@ -1,0 +1,66 @@
+.callerListName {
+    font-size: 12px;
+}
+.callerListNumber,.callDate  {
+    font-size: 10px;
+}
+.callActivities {
+    font-size: 9px;
+}
+.nameMessenger {
+    font-size: 13px;
+}
+.showMsgDateMob {
+    font-size: 9px;
+}
+.msgBox {
+    max-width: 80%;
+}
+#nameOfPatient {
+    font-size: 16px;
+}
+.followupSetBox {
+    width: 88%;
+    height: 34px;
+}
+.followup-logo {
+    width: 20px;
+    height: 20px;
+}
+.followup-logo p, .followupNameid p {
+    font-size: 10px;
+}
+.followupNameid p:nth-child(2) {
+    font-size: 8px;
+}
+#followUp, #drName, #drAddress {
+    font-size: 8px;
+}
+.fubtn {
+    width: 45px;
+    height: 20.71px;
+}
+.rmTime p {
+    font-size: 9px;
+}
+.rAlogo{
+    font-size: 12px;
+}
+.setReminder {
+    height: 27px;
+}
+#selectRemind, #noteAdds {
+    font-size: 8px;
+}
+.sendingMsgBoxMob form a {
+    width: 20%;
+}
+.inputFileMob {
+    width: 80%;
+}
+#submitBtnMob i {
+    font-size: 16px;
+}
+.inputFileMob {
+    padding: 3px 5px;
+}

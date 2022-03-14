@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    display: flex;
+}
+.navbarForMob,#mobAllbtn,#showMsgDate,.angleDownMob,.showMsgDateMob,.callDate,.MobOptionsForMess,.sendingMsgBoxMob{
+    display: none;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
+  }
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .checked {
+display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checked
+{
+display: inline-block;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+{
+display: none;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+      
+      /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+       
+      /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #007185; 
+}
+      
+      /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(33, 55, 104); 
+}    
+/* for chatting and calling list */
+.chatAndCallList{
+    width: 418px;
+    height: 926px;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: scroll;
+}
+.part-1{
+    height: 36px;
+    width: 100%;
+    padding: 2px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.chatOptions button{
+    width: 100px;
+    height: 34px ;
+    padding: 5px 8px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.chatOptions button:hover{
+    background-color: #24C534;
+    color: white;
+}
+.refresh button{
+    background-color: #0997FF;
+    color: white;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.searchBar{
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 32px
+}
+.search,#searchCallHistory{
+    background: #FFFFFF;
+    border: 1px solid #007185;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.search::placeholder,#searchCallHistory::placeholder{
+    padding: 0 2px;
+    font-size: 12px;
+}
+.searchButton,.searchCallButton{
+    background-color: #007185;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    padding: 1px 2px;
+}
+/* chat list */
+.chatListMethod{
+    margin-top: 10px;
+    display: flex;
+    font-size: 14px;
+    width: 393px;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+.chatListMethod ul{
+    list-style: none;
+}
+.chatListMethod .f{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.messageBox{
+    width: 100%;
+}
+.messageBox .box{
+    width: 100%;
+    padding: 0 5px;
+}
+.messageBox .box:hover{
+    background-color: #EDEDED;
+}
+.box .names,.msgAndInfo{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.nameMessenger{
+    font-size: 19px;
+}
+.msg{
+    font-size: 12px;
+    width: 272px;
+}
+.additional{
+    list-style: none;
+    display: flex;
+}
+.unreadCount{
+    background-color: #24C534;
+    border-radius: 50%;
+    width: 20px;
+    color: white;
+    height: 20px;
+}
+/* call list */
+.callList{
+    display: none;
+}
+.listMethod{
+    width: 90%;
+}
+.listMethod ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style: none;
+}
+.listMethod ul li a{
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 5px ;
+}
+.listMethod ul li a:hover{
+    background-color: #7ECBE2;
+}
+.callsInfo{
+    height: 83px;
+}
+.callsInfo:hover{
+    background: #F4F1F1;
+}
+.callsInfo ul li{
+    list-style: none;
+}
+.callerListName{
+    font-size: 14px;
+    font-weight: 500;
+}
+.callerListNumber{
+    font-size: 12px;
+}
+.callActivities{
+    font-size: 10px;
+    color:  #747474;
+}
+.outgoingIcon{
+    color: #FF0000;
+}
+.incomingIcon{
+    color: #01A7CD;
+}
+.missedIcon{
+    color: #5588B8;
+}
+.AttemptedIcon{
+    color: #01DA4D;
+}
+.viewPrvCall a{
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #10BDF1;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+.viewPrvCall a:hover{
+    box-shadow: 2px 2px 8px black;
+}
+/* pateint details & chat */
+.mainPart{
+    height: 975px; 
+    width: 100%;
+}
+.pateintDetails{
+    display: flex;
+    height: 121px;
+    position: relative;
+    z-index: 7;
+}
+.patientLogoPart{
+    width: 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.pateint-logo{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color: #F8BDBD;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.pateint-logo p{
+    font-size: 26px;
+    margin-top: 10px;
+}
+.patientDetailsPart{
+    width: 55%;
+}
+.details1{
+    height: 50%;
+}
+#nameOfPatient{
+    font-size: 23px;
+}
+.patientName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5px;
+}
+#addressOfPatient{
+    font-size: 12px;
+}
+.details2{
+    display: flex;
+    align-items: center;
+}
+.details2 p{
+    font-size: 12px;
+}
+.details2 div{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.divider{
+    border-left: 3px solid #7ECBE2;
+    height: 50%;
+  }
+.additionalDetailPart{
+    width: 35%;
+    position: relative;
+    z-index: 0;
+}
+.addDetailPart1{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+#followupButton{
+    font-size: 11px;
+    background-color:#D7ECFF;
+    border: 1px solid aqua;
+    padding: 2px 4px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+#editButton{
+    font-size: 13px;
+    border: 1px solid black;
+    padding: 2px 6px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+.addDetailPart2{
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.iconSetup{
+    font-size: 12px;
+}
+.backBlue{
+    background-color: #BFF5E8;
+    color: #4BC0A4;
+    display: inline;
+    padding: 5px;
+    border-radius: 50%;
+}
+.moreIcon{
+    background-color: #E2E2E2;
+    border-radius: 50%;
+}
+
+
+/* **call setting options** */
+.radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    /* margin: 5px; */
+    cursor: pointer;
+}
+.radio-custom-label {
+    position: relative;
+}
+.radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    /* border: 2px solid #ddd; */
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    /* padding: 2px; */
+    margin-right: 10px;
+    text-align: center;
+}
+
+.mP {
+    font-size: 10px;
+}
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #bbb;
+}
+
+/* calling box */
+.callingBox{
+    position: absolute;
+    width: 380px;
+    height: 232px;
+    left:65%;
+    /* top: 69px; */
+    background: #313131;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 9;
+}
+#callSettingBox{
+    position: absolute;
+    width: 195px;
+    height: 141px;
+    left: 79%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+}
+.callSettingoption,.audioSettingoption{
+    font-size: 14px;
+    font-weight: 500;
+}
+#callingBox{
+    display: flex;
+    flex-direction: column;
+}
+#callRinging,#callSeconds{
+    font-size: 12px;
+}
+#callRinging{
+    display: none;
+}
+.callBoxesOptions{
+    display: flex;
+    justify-content: space-around;
+}
+.callOptionBox{
+    list-style: none;
+    width: auto;
+    height: 50px;
+}
+.callOptionBox p{
+    font-size: 10px;
+    margin-top: 7px;
+    color: white;
+}
+.callOptionBox a{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50px;
+    border: 0.5px solid #FFFFFF;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.callOptionBox a i{
+    color: white;
+    font-size: 12px;
+    margin: 5px;
+
+}
+.callEndBox{
+    background-color: #FF0000;
+    border: none;
+    cursor: pointer;
+}
+#ui-datepicker-div{
+    display: none;
+}
+/*  <!-- pateint details & chat --> */
+.openReminderBox{
+        display: none;
+        max-width: 330px;
+        height: 274px;
+        width: 330px;
+        background: #FFFCE3;
+        border: 1px solid #DFDFDF;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left:50%;
+        z-index: 8;
+}
+.showToday{
+    text-align: center;
+    font-size: 14px;
+    height: 8%;
+    margin-top: 2px;
+}
+.showToday a{
+    color: #000000;
+    text-decoration: none;
+}
+.jumpTotext{
+    color: #8D8D8D;
+    font-size: 12px;
+}
+.showJumpSugg{
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+}
+#ui-datepicker-div{
+    background-color: #FFFFFF;
+    width: 350px;
+}
+
+.ui-datepicker-header{
+    display: flex;
+    justify-content: space-around;
+}
+.ui-datepicker-calendar{
+    width: 100%;
+}
+.ui-state-default{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.ui-state-disabled .ui-state-default{
+    color: #BAB8B8;
+}
+.ui-datepicker-today a{
+    color: #24C534;
+}
+.ui-icon{
+    color: #FFB506;
+}
+.ui-datepicker-prev,.ui-datepicker-next{
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #000000;
+
+}
+.chatBox{
+    overflow-y: scroll;
+    z-index: 1;
+    position: relative;
+    z-index: 2;
+    height: 631px;
+}
+.chooseDate{
+    position: relative;
+    display: inline;
+    left: 40%;
+}
+
+.msgBox{
+    z-index: 2;
+    max-width: 35%;
+    position: relative;
+    top: 35px;
+    margin: 7px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.right{
+    float: right;
+    clear: both;
+    background-color: #BCF0FF;
+}
+.left{
+    float: left;
+    clear: both;
+    background-color:#FFFFFF;
+}
+.upperBoundBox{
+    max-width: 195px;
+    height: 27px;
+    margin: 15px auto;
+}
+.alert{
+    position: relative;
+   top: 35px;
+}
+.alertBox{
+   clear: both;
+   
+   text-align: center;
+   border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: #FFFFFF;
+}
+.alertBox span{
+    font-size: 14px;
+}
+.showDate{
+    font-size: 10px;
+    float: right;
+}
+.followupSetBox{
+    clear: both;
+    max-width: 703px;
+    height: 69px;
+    background-color: #EAFFFB;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    position: relative;
+    top: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+.followupLogoPart{
+    width: 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.followup-logo{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color: #F8BDBD;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.followup-logo p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.followUpDetails{
+    width: 70%;
+    height: 100%;
+}
+.followupNameid{
+    justify-content: flex-start;
+    align-items: center;
+    height: 50%;
+}
+.followupNameid p{
+    margin: 0 8px;
+    font-size: 16px;
+}
+.followupNameid p:nth-child(2){
+    font-size: 12px;
+}
+.drAndOffice{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height: 50%;
+    font-size: 14px;
+}
+#drName,#drAddress{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.fubtn{
+    width: 70px;
+    height: 27.71px;
+    background: #FFB506;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+.fubtn:hover{
+    background-color: black;
+    color: #FFB506;
+}
+.reminderAlert{
+    margin: auto;
+    clear: both;
+    max-width: 400px;
+    position: relative;
+    top: 45px;
+    
+}
+.rmBox{
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 2px ;
+}
+.rmTime{
+    font-size: 13px;
+    display: flex;
+
+}
+.rmTime p{
+    display: flex;
+    margin: 0;
+}
+.setReminder{
+    margin: auto;
+    clear: both;
+    max-width: 452px;
+    position: relative;
+    top: 45px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.setReminder p{
+    margin: 0;
+    font-size: 14px;
+}
+#noteAdds{
+    margin-left: 15px;
+    color: black;
+    text-decoration: none;
+}
+/* suggestions */
+.LowerPart{
+    height: 223px;
+
+}
+.myP{
+    background: #EDECE8;
+    
+}
+
+#bubble-btn i{
+    color: #007185;
+    background-color: #FFFFFF;
+    position: relative;
+    width: 50px;
+    bottom: 25px;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    z-index: 3;
+}
+.headSuggest{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    color: #007185;
+    margin-top: 5px;
+    
+}
+.headSuggest a:hover{
+   font-weight: bold;
+   text-decoration: underline;
+}
+.listSuggestions{
+    width: 80%;
+    margin: auto;
+}
+.addButton{
+    background: #C8C7C7;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+.suggestionsMsg{
+    margin: 10px;
+}
+.suggestNewMsg{
+    font-size: 14px;
+    list-style: none;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: 0.5px solid #BAB8B8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 2px 4px;
+}
+.suggestNewMsg:hover{
+    background-color: #C4C4C4;
+}
+.QAsuggestions{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    /* overflow-y: scroll; */
+}
+.QAaddbtn{
+    width: 5%;
+    margin-bottom: 15px;
+}
+.QAaddicons{
+    width: 38px;
+    height: 38px;
+    background: #FDD8BD;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.QAlist{
+    width: 90%;
+    overflow-y: scroll;
+}
+.QAlist li{
+    list-style: none;
+    border-top: 1px solid #BAB8B8;
+}
+.QAlist li p a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.greenIcon{
+    color: #24C534;
+    margin: 0 10px;
+}
+/* sending message */
+.sendingMsgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+.sendingMsgBox a{
+    background-color: #EBFFE5;
+    padding: 8px;
+    border-radius: 50%;
+}
+.sendingMsgBox a:nth-child(2){
+    background-color: #FFE3E3;
+}
+.send-container{
+    width: 90%;
+}
+#sendingMsg{
+    width: 90%;
+    margin: 0 10px;
+    outline: none;
+    background: #FFFFFF;
+    border: 0.5px solid #BAB8B8;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 38px;
+}

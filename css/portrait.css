@@ -1,0 +1,215 @@
+.chatAndCallList{
+    width: 300px;
+}
+.chatOptions button {
+    width: 70px;
+    height: 22px;
+    padding: 0px 1px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 3px;
+    font-size: 9px;
+}
+.refresh button {
+    width: 25px;
+    height: 25px;
+}
+.search,#searchCallHistory{
+    width: 70%;
+}
+.chatListMethod .f {
+    width: 100%;
+}
+.filterOptionButton{
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.messageBox .box {
+    padding: 0;
+    margin: 20px 0;
+}
+.box .names, .msgAndInfo {
+    margin-bottom: 2px;
+}
+.msg {
+    font-size: 9px;
+    width: 100%;
+}
+.nameMessenger {
+    font-size: 13px;
+}
+.unreadCount {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+}
+.custom-checkbox{
+    font-size: 13px;
+}
+.listMethod ul li a {
+    font-size: 9px;
+    margin: 0 4px;
+}
+.separator,.callerListNumber{
+    font-size: 9px;
+}
+.callerListName {
+    font-size: 10px;
+}
+.callsInfochild{
+    margin-bottom: 2px;
+}
+.callActivities {
+    font-size: 9px;
+}
+#viewPrevCall{
+    font-size: 11px;
+}
+.pateint-logo {
+    width: 40px;
+    height: 40px;
+}
+.pateint-logo p {
+    font-size: 18px;
+}
+.patientName {
+    padding: 0;
+}
+#nameOfPatient {
+    font-size: 14px;
+}
+.patientName a{
+    font-size: 11px;
+}
+#addressOfPatient {
+    font-size: 9px;
+}
+.details2 div {
+    margin: 0 7px;
+}
+.patientDetailsPart {
+    width: 49%;
+}
+.detIcon{
+    font-size: 11px;
+}
+.details2 p {
+    font-size: 9px;
+}
+.additionalDetailPart {
+    width: 40%;
+}
+#editButton {
+    font-size: 8px;
+    padding: 2px 4px;
+}
+.backBlue {
+    font-size: 11px;
+}
+.iconSetup {
+    font-size: 8px;
+    margin-top: 5px;
+}
+#datePicker{
+    width: 19%;
+    font-size: 11px;
+}
+#SendMsg,#RecivedMsg{
+    font-size: 11px;
+    margin-bottom: 0;
+}
+.showDate{
+    font-size: 9px;
+}
+.alertBox span {
+    font-size: 10px;
+}
+.followupSetBox {
+    max-width: 400px;
+    width: 82%;
+}
+.followup-logo {
+    width: 30px;
+    height: 30px;
+}
+.followup-logo p ,.followupNameid p {
+    font-size: 12px;
+}
+.followupNameid p:nth-child(2) {
+    font-size: 9px;
+}
+#followUp,#drName, #drAddress {
+    font-size: 10px;
+}
+.fubtn{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rmBox {
+    justify-content: center;
+    align-items: center;
+}
+.rmTime p {
+    font-size: 11px;
+}
+.setReminder {
+    justify-content: center;
+    align-items: center;
+}
+#selectRemind,#noteAdds{
+    font-size: 11px;
+}
+.headSuggest a{
+   font-size: 11px;
+ }
+ #bubble-btn i {
+    height: 40px;
+}
+.send-container {
+    margin-top: 15px;
+}
+.sendingMsgBox a {
+    font-size: 11px;
+}
+#sendingMsg {
+    width: 85%;
+    height: 26px;
+}
+.suggestNewMsg {
+    font-size: 10px;
+}
+.QAlist li p a {
+    font-size: 10px;
+}
+.QAaddbtn {
+    width: 8%;
+}
+.QAlist p{
+    margin-bottom: 2px;
+}
+.QAaddicons {
+    width: 30px;
+    height: 30px;
+}
+.hasDatepicker{
+    width: 60%;
+}
+.openReminderBox {
+    max-width: 330px;
+    height: 274px;
+    width: 50%;
+    left: 26%;
+}
+.callingBox {
+    left: 40%;
+    height: 200%;
+    width: 59%;
+}
+#callSettingBox {
+    position: absolute;
+    left: 58%;
+    width: 30%;
+    height: 177%;
+}

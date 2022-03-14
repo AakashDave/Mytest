@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.callingBox{
+    position: absolute;
+    top: 0%;
+    max-width: 380px;
+    height: 200%;
+    width: 35%;
+}
+.waves{
+    overflow: hidden;
+}
+#callSettingBox{
+    position: absolute;
+    left: 75%;
+    width: 20%;
+    height: 160%;
+}
+.microPhoneSetting{
+    height: 50%;
+}
+/* mid part */
+.pateint-logo{
+    width: 60px;
+    height: 60px;
+
+}
+#followupButton{
+    font-size: 8px;
+}
+/* last suggest box */
+.suggestNewMsg{
+    margin: 2px 1px;
+}

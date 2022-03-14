@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+
+    <!-- jquery script -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!-- external CSS -->
+    <link rel="stylesheet" href="./css/style1.css" />
+    <!-- for desktop -->
+    <link rel="stylesheet" media="screen and (max-width: 1500px)" href="css/desktop.css" />
+    <!-- for tablet portrait mode -->
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="css/portrait.css" />
+    <!-- for tablet or ipad mode -->
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/tablet.css" />
+    <!-- Fontawesome kit link -->
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/mobile.css" />
+    <!-- Fontawesome kit link -->
+    <script
+      src="https://kit.fontawesome.com/c096fa5e26.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>DashBoard</title>
+  </head>
+  <body>
+    <header style="height: 61px;">
+      <nav class="navbarForMob justify-content-around align-items-center">
+        <div class="MobOptionBox" id="MobOptionBox">
+          <ul>
+            <li><a>Search</a></li>
+            <li><a>Broadcast</a></li>
+            <li><a>Reminder</a></li>
+            <li><a>Setting</a></li>
+          </ul>
+        </div>
+        <i class="fas fa-bars" id="hamburger"></i>
+        <p id="logoOfWeb">LOGO</p>
+        <div class="mobIcons" id="mobIcons">
+           <i class="fas fa-search" onclick="openSearchBox()"></i>
+          <i class="fas fa-ellipsis-v" onclick="openMobPopUp()"></i>
+        </div>
+        <div class="searchInMob" id="searchInMob">
+          <a type="button" onclick="backToNav()"><i class="fas fa-arrow-left" style="color: #B9B9B9;"></i></a>
+          <input type="text" name="inputSearch" id="inputSearch" placeholder="Search...">
+          
+        </div>
+      </nav>
+      
+    </header>
+    
+    <!-- main part -->
+    <main >
+      <!-- side navigation icons -->
+      <aside
+        style="width: 63px; height: 995px; background-color: violet"
+      ></aside>
+
+      <!-- for chatting & calling list -->
+      <section
+        class="chatAndCallList"
+      >
+        <!-- for selecting option and seraching -->
+        <div class="part-1">
+          <div class="chatOptions">
+            <button id="mobAllbtn">
+               All
+            </button>
+            <button id="chatButton">
+              <i class="fas fa-comment-alt"></i> Chat (<span id="numberOfChat">4</span>)
+            </button>
+            <button id="callButton">
+              <i class="fas fa-phone-alt"></i> All Calls (<span id="numberOfCall">4</span>)
+            </button>
+          </div>
+          <div class="refresh">
+            <button><i class="fas fa-redo"></i></button>
+          </div>
+        </div>
+
+        <div class="chatList" id="chatList" style="width: 100%">
+          <!-- searching in chatlist -->
+          <div class="searchBar">
+            <input
+              type="search"
+              name="search"
+              id="searchChatPerson"
+              class="search"
+              placeholder="Enter Name"
+            />
+            <button class="searchButton" id="searchButton"><i class="fas fa-search"></i></button>
+          </div>
+          <!-- menu for call methods -->
+          <div class="chatListMethod" id="chatListMethod"style="width: 100%">
+            <ul class="f">
+              <li>
+                <input type="checkbox" name="unread" id="unread" />
+                <label for="unread">unread</label>
+              </li>
+              <li>
+                <!-- <label for="starredMsg">starred</label> -->
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="starredMsg" id="starredMsg" />
+                  <i class="fas fa-star-half-alt unchecked"></i>
+                  <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                  starred
+                </label>
+             
+              </li>
+              <ul class="filterOptionButton">
+                <i class="fas fa-filter"></i>
+                Filter
+              </ul>
+            </ul>
+          </div>
+        
+          <hr style="color: black; width: 80%; margin: auto" />
+          <!-- message boxes -->
+          <div class="messageBox" id="messageBox">
+            <div class="box " id="box1">
+              <ul class="names">
+                <li class="nameMessenger">Sandip Rajput</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >Yesterday</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred ">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                      <i class="fas fa-star-half-alt unchecked"></i>
+                      <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                  </label>
+                  </li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+                <hr/>
+              </ul>
+            </div>
+            <div class="box " id="box2">
+              <ul class="names">
+                <li class="nameMessenger">Vijay Bali</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box3">
+              <ul class="names">
+                <li class="nameMessenger">Vishal</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box4">
+              <ul class="names">
+                <li class="nameMessenger">Shivaji Dnyanu Mokashi</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box5">
+              <ul class="names">
+                <li class="nameMessenger">Quresh Badshah</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box6">
+              <ul class="names">
+                <li class="nameMessenger">Sandip Raut</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i>Welldone connected you with
+                  this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box7">
+              <ul class="names">
+                <li class="nameMessenger">Vijay Bali</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box8">
+              <ul class="names">
+                <li class="nameMessenger">Vishal</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred " ><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box9">
+              <ul class="names">
+                <li class="nameMessenger">Shivaji Dnyanu Mokashi</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span >DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+            <div class="box " id="box10">
+              <ul class="names">
+                <li class="nameMessenger">Shivaji Dnyanu Mokashi</li>
+                <li class="angleDownDesk"><i class="fas fa-angle-down"></i></li>
+                <li class="showMsgDateMob"><span>DD/MM/YYY</span></li>
+              </ul>
+              <ul class="msgAndInfo">
+                <li class="msg">
+                  <i class="fas fa-check-double"></i> Welldone connected you
+                  with this seller
+                </li>
+                <ul class="additional">
+                  <li class="unreadCount text-center me-1">1</li>
+                  <li class="Starred "><label class="custom-checkbox">
+                    <input type="checkbox" name="checkBoxStarred" class="checkBoxStarred">
+                    <i class="fas fa-star-half-alt unchecked"></i>
+                    <i class="fas fa-star checked" style="color: #fffb00;"></i>
+                </label></li>
+                </ul>
+                <li class="angleDownMob"><i class="fas fa-angle-down"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- call list  -->
+        <div class="callList" id="callList" style="width: 100%">
+          <!-- searching in calllist -->
+          <div class="searchBar">
+            <input
+              type="search"
+              name="searchCall"
+              id="searchCallHistory"
+              class="searchCallHistory"
+              placeholder="Name or Mobile"
+            />
+            <button class="searchCallButton" onclick="searchCallHistory()"><i class="fas fa-search"></i></button>
+          </div>
+          <!-- menu for call methods -->
+          <div class="listMethod" id="listMethod" >
+            <ul>
+              <li ><a href="#" id="allCallTab" onclick="openAllTab()">All</a></li>
+              <li ><a href="#" id="missCallTab" onclick="openMissTab()">Missed</a></li>
+              <li ><a href="#" id="recieveCallTab" onclick="openreceivedTab()">Recieved</a></li>
+              <li ><a href="#" id="outgoingCallTab" onclick="openOutgoingTab()">Outgoing</a></li>
+            </ul>
+          </div>
+          <hr id="hiddenHrMob" style="color: black; width: 80%; margin: auto" />
+          <div class="allCalls" id="allCalls">
+            <div class="callsBox outgoingType m-auto">
+              <div class="separator"><span class="showCallDate">28-feb-2022</span></div>
+              <div class="callsInfo ">
+                <ul class="callsInfochild d-flex h-50 align-items-center">
+                  <li class="callerListName me-2">Padhiyar Vinod</li>
+                  <li class="callerListNumber"> +91-9898992555</li>
+                  <li class="callDate ms-auto">DD/MM/YYYY</li>
+                </ul>
+                <ul class="d-flex h-50 justify-content-between">
+                  <li class="callActivities"> <span class="callListType">Call Outgoing </span>at <span class="callingDate">Sat 25-Dec-21</span> <span class="callingTime">12:35 pm</span> </li>
+                  <li class="me-3"><i class="outgoingIcon fas fa-level-up-alt"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="callsBox incomingType m-auto">
+              <div class="separator"><span class="showCallDate">25-feb-2022</span></div>
+              <div class="callsInfo ">
+                <ul class="callsInfochild d-flex h-50 align-items-center">
+                  <li class="callerListName me-2">Sadika Inamdar</li>
+                  <li class="callerListNumber"> +91-9965743985</li>
+                  <li class="callDate ms-auto">DD/MM/YYYY</li>
+                </ul>
+                <ul class="d-flex h-50 justify-content-between">
+                  <li class="callActivities"> <span class="callListType">Call incoming </span>at <span class="callingDate">Sat 25-Dec-21</span> <span class="callingTime">12:35 pm</span> </li>
+                  <li class="me-3">
+                    <i class="incomingIcon fas fa-level-down-alt"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="callsBox missedType m-auto">
+              <div class="separator"><span class="showCallDate">25-feb-2022</span></div>
+              <div class="callsInfo ">
+                <ul class="callsInfochild d-flex h-50 align-items-center">
+                  <li class="callerListName me-2">joshi parth</li>
+                  <li class="callerListNumber"> +91-7585369527</li>
+                  <li class="callDate ms-auto">DD/MM/YYYY</li>
+                  
+                </ul>
+                <ul class="d-flex h-50 justify-content-between">
+                  <li class="callActivities"> <span class="callListType">Missed Call </span>at <span class="callingDate">Sat 25-Dec-21</span> <span class="callingTime">12:35 pm</span> </li>
+                  <li class="me-3">
+                    <i class="missedIcon fas fa-long-arrow-alt-down"></i>
+                   </li>
+                </ul>
+              </div>
+            </div>
+            <div class="callsBox AttemptedType m-auto">
+              <div class="separator"><span class="showCallDate">25-feb-2022</span></div>
+              <div class="callsInfo ">
+                <ul class="callsInfochild d-flex h-50 align-items-center">
+                  <li class="callerListName me-2">ashwin bhalerao</li>
+                  <li class="callerListNumber"> +91-8542357496</li>
+                  <li class="callDate ms-auto">DD/MM/YYYY</li>
+                </ul>
+                <ul class="d-flex h-50 justify-content-between">
+                  <li class="callActivities"> <span class="callListType">Call attempted </span>at <span class="callingDate">Sat 25-Dec-21</span> <span class="callingTime">12:35 pm</span> </li>
+                  <li class="me-3">
+                    <i class="AttemptedIcon fas fa-arrow-left"></i>
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="separator mt-5 hideDateMob">Showing Date till<span> 25 feb 2022</span></div>
+            <div class="viewPrvCall mt-5 text-center" id="viewPrevCallMob">
+              <a href="#" type="button" id="viewPrevCall" class="p-1">view previous calls</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- pateint details & chat -->
+      <section class="mainPart" >
+        <div
+          class="pateintDetails"
+          style=" background-color: aliceblue"
+        >
+        <!-- call setting box -->
+        <div class="callSettingBox" id="callSettingBox">
+            <div class="microPhoneSetting">
+              <h6 class="callSettingoption ms-3">Microphone</h6>
+              <div class="mP"> 
+                <input id="radio-1" class="radio-custom" name="radio-group" type="radio" checked>
+                <label for="radio-1" class="radio-custom-label">Default Communications Device</label>
+            </div>
+            <div class="mP">
+                <input id="radio-2" class="radio-custom"name="radio-group" type="radio">
+                <label for="radio-2" class="radio-custom-label">Jack Mic (Realtek(R) Audio)</label>
+            </div>
+            </div>
+            <hr style="margin: 0;">
+            <div class="audioSetting">
+              <h6 class="audioSettingoption ms-3">Audio Device</h6>
+              <div class="mP"> 
+                <input id="radio-3" class="radio-custom" name="radio-group-2" type="radio" checked>
+                <label for="radio-3" class="radio-custom-label">Default Communications Device</label>
+            </div>
+            <div class="mP">
+                <input id="radio-4" class="radio-custom"name="radio-group-2" type="radio">
+                <label for="radio-4" class="radio-custom-label">Speakers (Realtek(R) Audio)</label>
+            </div>
+            </div>
+        </div>
+        <!-- calling box -->
+          <div class="callingBox text-center" id="callingBox" onclick="closeSettingTab()">
+            
+            <div class="callerName d-flex mt-2" >
+              <span id="callerName" style="color: #ffffff; font-size: 12px; width: 93%;">scarlett johansson</span>
+              <div class="callingOptions" style="width: 7%;">
+                <a style="color: #ffffff;" id="callSettingButton" onclick="openSettingBox()"><i class="fas fa-ellipsis-h"></i></a>
+              </div>
+            </div>
+              <div class="callerLogoPart">
+                <div class="followup-logo m-auto ">
+                  <p>SJ</p>
+                </div>
+              </div>
+              <div class="callsituation">
+                <span id="callRinging" class="text-light">Ringing...</span>
+                <span id="callSeconds" class="text-light">00:10:12</span>
+              </div>
+              <div class="waves">
+                <span class="d-none"><hr style="border-top: 4px dotted whitesmoke;"></span>
+                <span style="color: #0A8609; max-width: 100%;"><i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                  <i class="fas fa-water"></i>
+                </span>
+              </div>
+              <hr style="border: 0.5px solid white;">
+
+            <div class="callOption">
+              <ul class="callBoxesOptions">
+                <li class="callOptionBox"><a href="" ><i class="fas fa-volume-up"></i></a><p>speaker</p></li>
+                <li class="callOptionBox"><a href="" ><i class="fas fa-user"></i></a><p>add participant</p></li>
+                <li class="callOptionBox"><a href="" ><i class="fas fa-microphone-slash"></i></a><p>mute</p></li>
+                <li class="callOptionBox " id="callEnd" onclick="callEnd()"><a class="callEndBox"><i class="fas fa-phone-slash"></i></a><p>End</p></li>
+              </ul>
+            </div>
+          </div>
+        <!-- logo of patients -->
+          <div class="patientLogoPart">
+            <a type="button" onclick="backToNav()"><i class="fas fa-arrow-left" style="color: #B9B9B9;"></i></a>
+            <div class="pateint-logo">
+              <p>PV</p>
+            </div>
+          </div>
+          
+          <!-- patient details -->
+          <div class="patientDetailsPart">
+            <div class="details1">
+              <div class="patientName">
+                <h3 id="nameOfPatient">Padhiyar Vinod</h3>
+                <a href="#">Show Number</a>
+              </div>
+              <div class="patientAddress">
+                <p id="addressOfPatient"><i class="fas fa-map-marker-alt" style="color: #FE0404;"></i> Apsara Sky Line, Navapura, Vadodara,Gujarat, India-390004</p>
+              </div>
+            </div>
+            <div class="details2">
+              <div id="voiceCall" class="voice-call text-center" onclick="VoiceCall()">
+                <i class="fas fa-phone detIcon" style="color: #0A8609;"></i>
+                <p>voice Call</p>
+              </div>
+              <div id="searchMsg" class="search-msg text-center">
+                <i class="fas fa-search detIcon" style="color: #0997FF
+                ;"></i>
+                <p>search</p>
+              </div>
+              <div id="media" class="media text-center">
+                <i class="fas fa-folder detIcon" style="color: #E4A951;"></i>
+                <p>media</p>
+              </div>
+              <div id="lastSeen" class="last-seen d-flex">
+                <i class="fas fa-clock detIcon" style="color:#565656"></i>
+                <p> last seen at <span id="timeOfLastSeen">4.10 PM</span></p>
+              </div>
+            </div>
+          </div>
+
+          
+          <!-- a verticle line -->
+          <div class="divider"></div>
+
+          <div class="additionalDetailPart">
+            <div class="addDetailPart1">
+              <a type="button" id="followupButton" href="#"><i class="fas fa-tag"></i> Follow up <span id="cancleEdit"><i class="fas fa-times"></i></span></a>
+              <a type="button" id="editButton" href="#"><i class="fas fa-edit" style="color: #4BC0A4;"></i> Add / Edit Contact details</a>
+            </div>
+            <div class="addDetailPart2">
+              <div class="reminderTag text-center">
+                <div class="reminderIcon backBlue" id="reminderIcon" onclick="openReminder()">
+                  <a href="#"><i class="fas fa-clock"></i></a>
+                </div>
+                <p class="iconSetup">Set Reminders</p>
+              </div>
+              <div class="addTag text-center">
+                <div class="addIcon backBlue" id="addIcon">
+                  <a href="#"><i class="fas fa-clipboard"></i></a>
+                </div>
+                <p class="iconSetup">add Notes</p>
+              </div>
+              <div class="onlyTag text-center">
+                <div class="tagIcon backBlue" id="tagIcon">
+                  <a href="#"><i class="fas fa-tag"></i></a>
+                </div>
+                <p class="iconSetup">add Tags</p>
+              </div>
+              <div class="moreTag text-center">
+                <div class="moreIcon " id="moreIcon">
+                  <a href="#"><i class="fas fa-ellipsis-v" style="color: black;"></i></a>
+                </div>
+                <p class="iconSetup">More</p>
+              </div>
+            </div>
+          </div> 
+          <div class="MobOptionsForMess">
+            <i class="fas fa-tag" style="color: #0085FF;"></i>
+            <i class="fas fa-phone-alt" style="color: #017800; padding: 5px; border-radius: 50%; background-color: 
+            #9AFF99;"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+          
+        </div>
+      
+        <div
+          class="chatBox"
+          style=" background-color: 
+          #EDECE8"
+        >
+        <div class="openReminderBox" id="openReminderBox">
+            <div class="showToday d-flex ps-4">
+              <a href=""><span id="showToday"></span></a>
+            </div>
+            <hr>
+            <div class="jumpToNearestDate ps-4">
+              <p class="jumpTotext">Jump To...</p>
+              <a class="showJumpSugg" href="">Yesterday</a>
+              <a class="showJumpSugg" href="">Last week</a>
+              <a class="showJumpSugg" href="">Last month</a>
+              <a class="showJumpSugg" href="">The very beginning</a>
+            </div>
+            <hr>
+            <div class="jumpToSpecificDate ps-4">
+              <p class="jumpTotext">Jump To...</p>
+              <form action="/">
+                <input type="text" id="fromdate" />
+              </form>
+            </div>
+        </div>
+        <div class="chooseDate">
+          <input type="date" name="datePick" id="datePicker">
+        </div>
+        
+        <div class="messages">
+          <!-- open reminderbox when set remonder is click -->
+          
+          <div class="right msgBox">
+            <p id="SendMsg">
+              I want to purchase Water Chiller.
+
+              Kindly send me price and other details.
+              Probable Requirement Type : Business Use
+            </p>
+            <span id="showDateSend" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:31 AM</span></span>
+          </div>
+          <div class="left msgBox">
+            <p id="RecivedMsg">
+              Need More Details of The Requirement
+            </p>
+            <span id="showDateRecieved" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:31 AM</span></span>
+          </div>
+          <div class="alert">
+            <div class="incomingAttempAlert upperBoundBox">
+              <!-- iAA (incoming attempt alert) -->
+              <div class="alertBox iAAbox">
+                <i class="fas fa-arrow-alt-circle-left" style="color: #0A8609;"></i>
+                <span>Call attempted-Incoming</span>
+              </div>
+              <span id="showDateiAA" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:35 AM</span></span>
+            </div>
+            <div class="missedAlert upperBoundBox">
+              <div class="alertBox missedbox">
+                <i class="fas fa-arrow-circle-left" style="color: #FE0404;"></i>
+                <span>Missed call</span>
+              </div>
+              <span id="showDatemissed" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:35 AM</span></span>
+            </div>
+            <div class="outgoingAttempAlert upperBoundBox">
+              <!-- iAA (incoming attempt alert) -->
+              <div class="alertBox oAAbox">
+                <i class="fas fa-arrow-alt-circle-right" style="color: #0997FF;"></i>
+                <span>Call attempted-Outgoing</span>
+              </div>
+              <span id="showDateoAA" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:35 AM</span></span>
+            </div>
+          </div>
+          <div class="followupSetBox">
+
+            <div class="followupLogoPart">
+              <div class="followup-logo">
+                <p>SJ</p>
+              </div>
+            </div>
+
+            <div class="followUpDetails">
+              <div class="followupNameid d-flex">
+                <p id="fuName">
+                  scarlett johansson
+                </p>
+                <p id="fuId"> id: <span id="idNo">12345</span> </p>
+              </div>
+
+              <div class="drAndOffice">
+                <a href="#" id="followUp" style="color: #F94B00;">Follow up</a>
+               <a href="#" id="drName">Dr.Mona.M.Abaza</a> 
+               <a href="#" id="drAddress">At Office-1</a> 
+              </div>
+            </div>
+
+            <div class="fuDetailButton d-flex justify-content-center align-items-center">
+              <a href="#" id="fubtn" class="fubtn text-center" type="button">Details</a>
+            </div>
+
+          </div>
+          <div class="reminderAlert">
+            <div class="rmBox d-flex">
+            <div class="rAlogo">
+              <i class="fas fa-clock" style="color: #0997FF;"></i> 
+            </div>
+            <div class="rmTime ms-1">
+              <p> Follow-up reminder set for <span id="rmDatepick"><input type="datetime-local" name="rmDatePick"></span></p>
+            </div>
+          </div>
+          <span id="showDateiAA" class="showDate"> <span class="showingDate"> 22 Sep'21</span>,<span class="showingTime"> 10:35 AM</span></span>
+          </div>
+          <div class="setReminder text-center">
+            <p id="selectRemind"><input type="checkbox" name="check" id="checkReminder"> Remind me after 
+              <select id="ReminderDay">
+                <option value="1">1 Day</option>
+                <option value="2">2 Day</option>
+                <option value="3">3 Day</option>
+                <option value="4">4 Day</option>
+                <option value="5">5 Day</option>
+                <option value="6">6 Day</option>
+                <option value="7">7 Day</option>
+                <option value="8">8 Day</option>
+                <option value="9">9 Day</option>
+                <option value="10">10 Day</option>
+                <option value="11">11 Day</option>
+                <option value="12">12 Day</option>
+              </select>
+              at 
+              <select id="RemindetTime">
+                <option value="8">8:00 AM</option>
+                <option value="9">9:00 AM</option>
+                <option value="10">10:00 AM</option>
+                <option value="11">11:00 AM</option>
+                <option value="12">12:00 PM</option>
+                <option value="1">1:00 PM</option>
+                <option value="2">2:00 PM</option>
+                <option value="3">3:00 PM</option>
+                <option value="4">4:00 PM</option>
+                <option value="5">5:00 PM</option>
+                <option value="6">6:00 PM</option>
+                <option value="7">7:00 PM</option>
+              </select>
+            </p>
+            <a href="#" id="noteAdds"><i class="fas fa-address-book" style="color: #0997FF;"></i>
+              Add note</a>
+            
+          </div>
+          
+        </div>
+      </div>
+        <div
+          class="LowerPart"
+          
+        >
+        <p class="myP m-0 text-center" style="height: 2px;">
+          <a id="bubble-btn" class="btn bubble-btn" onclick="collapse()"><i id="hideIcon" class="fas fa-chevron-down"></i><i id="showIcon" class="fas fa-angle-up"></i></a>
+        </p>
+        <div class="rplyAndAns" id="rplyAndAns" style="height: 75%; background-color: #ffffff;">
+          <div class="headSuggest d-flex justify-content-around">
+            <a id="suggestionsOption" onclick="gotoSuggest()"><p><i class="fas fa-mobile-alt"></i> Quick Reply Template</p></a>
+            <a onclick="gotoQA()"><p><i class="fas fa-question"></i> Quick Questions and Answers</p></a>
+          </div>
+
+          <div class="listSuggestions" id="listSuggestions">
+            <div class="addButton" style="display: inline;">
+              <a id="addSuggestMsg">+ Add</a>
+            </div>
+            <div class="suggestionsMsg">
+              <ul>
+                <li class="suggestNewMsg"><a>What is the total cost...</a></li>
+                <li class="suggestNewMsg"><a>Will get back to you</a></li>
+                <li class="suggestNewMsg"><a>Can you reply?</a></li>
+                <li class="suggestNewMsg"><a>Can you reply?</a></li>
+                <li class="suggestNewMsg"><a>Price is too high, my...</a></li>
+                <li class="suggestNewMsg"><a>What is the total cost...</a></li>
+                <li class="suggestNewMsg"><a>Will get back to you</a></li>
+                <li class="suggestNewMsg"><a>Can you reply?</a></li>
+                <li class="suggestNewMsg"><a>Can you reply?</a></li>
+                <li class="suggestNewMsg"><a>Price is too high, my...</a></li>
+                <li class="suggestNewMsg"><a>Okay</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="QAsuggestions" id="QAsuggestions">
+            <div class="QAaddbtn d-flex justify-content-center align-items-end">
+              <div class="QAaddicons d-flex justify-content-center align-items-center">
+              <a style="cursor: pointer;"><i class="fas fa-plus-circle"></i></a>
+            </div>
+            </div>
+
+            <div id="QAlist" class="QAlist">
+              <ul>
+                <li>
+                    <p><i class="greenIcon fas fa-sign-in-alt"></i><a class="suggestQA" id="suggestQA1">How do I start online consultation with doctors on welldone?
+                    </a></p>
+                </li>
+                <li><p><i class="greenIcon fas fa-sign-in-alt"></i><a class="suggestQA"  id="suggestQA2">Are your online doctors qualified?
+
+                </a></p></li>
+                <li><p><i class="greenIcon fas fa-sign-in-alt"></i><a class="suggestQA"  id="suggestQA3">Is online doctor consultation safe and secured on welldone?
+
+                </a></p></li>
+                <li><p><i class="greenIcon fas fa-sign-in-alt"></i><a class="suggestQA"  id="suggestQA4">What happens if I don’t get a response from a doctor?
+
+                </a></p></li>
+                <li><p><i class="greenIcon fas fa-sign-in-alt"></i><a class="suggestQA"  id="suggestQA5">Can I do a free online doctor consultation on welldone?
+                </a></p></li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+      <div class="sendingMsgBox" id="sendingMsgBox">
+        <!-- attaching file -->
+        <a href="#" id="attachFile"><i class="fas fa-paperclip fa-lg" style="color: #494949;"></i></a>
+        <!-- writing messages -->
+        <form action="#" class="send-container">
+          <input type="text" name="sendingMsg" id="sendingMsg" placeholder="Type your message here....">
+          <a type="submit" id="submitBtn"><i class="fas fa-paper-plane fa-lg"></i></a>
+        </form>
+      </div>
+      <div class="sendingMsgBoxMob" id="sendingMsgBoxMob">
+        <!-- writing messages -->
+        <form action="#" class="send-container">
+          <div class="inputFileMob">
+            <input type="text" name="sendingMsgMob" id="sendingMsgMob" placeholder="Message....">
+            <a href="#" id="attachFileMob"><i class="fas fa-paperclip fa-lg" style="color: #494949;"></i></a>
+          </div>
+          <a type="submit" id="submitBtnMob"><i class="fas fa-paper-plane fa-lg"></i></a>
+        </form>
+      </div>
+      </div>
+      </section>
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- external script -->
+    <script src="./js/script1.js"></script>
+  </body>
+</html>

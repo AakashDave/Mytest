@@ -1,0 +1,233 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+p{
+    margin-bottom: 0;
+}
+main aside,.angleDownDesk,.Starred,.separator{
+    display: none;
+}
+.patientName a,.patientAddress,#voiceCall,#searchMsg,#media,.divider,.additionalDetailPart{
+   display: none;
+}
+main{
+    display: block;
+}
+.chatAndCallList{
+    width: 98%;
+    border: none;
+    height: 95vh;
+    border-radius: 0;
+}
+.navbarForMob{
+    display: flex;
+    border-top: 1px solid black;
+    position: relative;
+    height: 100%;
+    border-bottom: 1px solid black;
+}
+.MobOptionBox{
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 3;
+}
+.MobOptionBox ul{
+    padding: 10px 15px;
+}
+.MobOptionBox ul li{
+    list-style: none;
+}
+.MobOptionBox ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.MobOptionBox ul li a:hover{
+    text-decoration: underline;
+    color: darkgray;
+  
+}
+.searchInMob{
+    width: 100%;
+    height: 100%;
+    background-color: #4E4E4E;
+}
+.searchInMob input{
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    background-color: #4E4E4E;
+    color: #B9B9B9;
+
+}
+.refresh{
+    display: none;
+}
+.part-1 {
+    height: 37px;
+}
+.chatOptions{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#mobAllbtn{
+    display: inline-block;
+}
+.chatOptions button{
+height: 100%;
+margin: 0;
+border-radius: 0;
+font-size: 11px;
+width: 33%;
+}
+.part-1 {
+    padding: 0;
+    margin: 0;
+}
+.chatListMethod,.searchBar{
+    display: none;
+}
+.messageBox {
+    width: 98%;
+}
+.nameMessenger {
+    font-size: 16px;
+}
+.messageBox .box {
+    padding: 0;
+    height: 78px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.msg {
+    font-size: 12px;
+}
+.showMsgDateMob{
+    display: inline-block;
+    font-size: 12px;
+}
+.listMethod {
+    width: 100%;
+}
+.listMethod ul{
+    width: 95%;
+}
+.listMethod ul li a {
+    font-size: 13px;
+}
+.callActivities{
+    font-size: 11px;
+}
+.callerListName {
+    font-size: 15px;
+}
+.separator, .callerListNumber {
+    font-size: 12px;
+}
+.callsInfo {
+   border-bottom: 1px solid black;
+}
+.callDate{
+    display: inline-block;
+    font-size: 12px;
+}
+.mainPart{
+    height: 100vh;
+}
+.pateintDetails{
+    height: 9%;
+}
+.MobOptionsForMess{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+.patientDetailsPart {
+    width: 50%;
+}
+.patientLogoPart {
+    width: 20%;
+}
+#nameOfPatient {
+    font-size: 20px;
+}
+.details2 p {
+    font-size: 12px;
+}
+.pateint-logo {
+    width: 30px;
+    margin: 5px;
+    height: 30px;
+}
+.pateint-logo p {
+    font-size: 14px;
+}
+.chatBox{
+    height: 83%;
+}
+.msgBox {
+    max-width: 70%;
+}
+#datePicker {
+    width: 30%;
+}
+.LowerPart{
+    height: 7%;
+}
+.myP,.rplyAndAns,.sendingMsgBox{
+    display: none;
+}
+
+.sendingMsgBoxMob{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sendingMsgBoxMob form{
+    display: flex;
+}
+.sendingMsgBoxMob form a{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+#submitBtnMob i{
+    background: #00A455;
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffffff;
+
+}
+
+.inputFileMob{
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 90%;
+    padding: 5px;
+    display: flex;
+}
+.inputFileMob input{
+    border:none;
+    outline: none;
+    width: 90%;
+}
