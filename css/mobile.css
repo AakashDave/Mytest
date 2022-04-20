@@ -64,3 +64,73 @@
 .inputFileMob {
     padding: 3px 5px;
 }
+.MobSettingBox {
+    left: 60%;
+}
+.attachOptionsMob {
+    right: 27%;
+}
+
+#openAttachImageBox ,#openAttachFileBox{
+    margin:0;
+    font-size: 10px;
+    left: 9%;
+    width: 50%;
+    height: 40px;
+}
+.cloudDateNumber{
+    font-size: 12px;
+} 
+#cloudBox {
+    width: 58%;
+    left: 3%;
+}
+.cloudImages img {
+    width: 22%;
+}
+#cancleCloudSave,#doneCloudSave {
+    font-size: 13px;
+    padding: 1px 2px;
+}
+.yesNobuttons {
+    font-size: 7px;
+}
+.popDiv h4 {
+    font-size: 9px;
+}
+.callOptionBox p {
+    font-size: 7px;
+}
+#popDiv {
+    width: 64vw;
+    left: 20%;
+}
+.callingBox {
+    left: 15%;
+    width: 80%;
+}
+#callSettingBox {
+    left: 35%;
+    width: 50%;
+}
+#MobSettingBox {
+    top: 75%;
+}
+#tagsOptionForMob {
+    width: 70vw;
+    left: 20%;
+   
+}
+#tagEditionBox {
+    width: 80%;
+    left: 10%;
+}
+
+#video, #canvas {
+    width: 230px;
+    height: 174px;
+    margin: 10px 0;
+}
+#cameraBox {
+    height: 77vh;
+}

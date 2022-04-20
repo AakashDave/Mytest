@@ -1,6 +1,63 @@
+/* navbar */
+.navbar-first{
+    width: 100px;
+}
+.navbar-brand,.buttonForSideNav{
+    font-size: 12px;
+}
+.nav-link{
+    padding: 0;
+    margin: 0;
+}
+.d-lg-none{
+    display: none;
+}
+#addPateintButton{
+    width: 71px;
+}
+.addpatient{
+    font-size: 10px;
+}
+.hospital-name{
+    font-size: 10px;
+}
+.inputForSearch{
+    width: 93px;
+    height: 30px;
+    font-size: 12px;
+}
+.searchbtn1{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+#dropbtnMyfunction{
+    font-size: 10px;
+}
+.nav-link-text {
+    font-size: 14px;
+    margin-left: 25px;
+}
+.alertBodyitems {
+    font-size: 0.8rem;
+}
+.MadBodyitems{
+    font-size: 0.8rem;
+}
+.adminSettingBox {
+    left: 79%;
+    width: 21%;
+}
+.adminSettingHeader{
+    font-size: 13px;
+}
 .chatAndCallList{
     width: 300px;
 }
+#MobSettingBox{
+    display: none;
+}
+
 .chatOptions button {
     width: 70px;
     height: 22px;
@@ -19,6 +76,10 @@
 }
 .chatListMethod .f {
     width: 100%;
+}
+.firstDisplay img{
+    width: 45%;
+    height: 30%;
 }
 .filterOptionButton{
     font-size: 12px;
@@ -212,4 +273,30 @@
     left: 58%;
     width: 30%;
     height: 177%;
+}
+.searchMsgsBox input {
+    font-size: 12px;
+}
+.extraInfo p {
+    font-size: 10px;
+}
+.popDiv h4 {
+    font-size: 14px;
+}
+.yesNobuttons{
+    font-size: 11px;
+}
+.imagesMedia {
+    height: 100px;
+    width: 100px;
+}
+.imgAndHead {
+    width: 100%;
+    height: 60px;
+}
+.linkOfPerticularMedia{
+    font-size: 7px;
+}
+#addNoteBox {
+    left: 25%;
 }

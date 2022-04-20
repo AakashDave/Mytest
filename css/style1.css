@@ -1,17 +1,264 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+/* navbar for desktop */
+.buttonForSideNav {
+    outline: none;
+    border: 1px solid #a4a4a4;
+    margin-right: 10px;
+    border-radius: 9px;
+}
+.navForDeskTop{
+    width: 100vw;
+}
+.buttonForSideNav:hover {
+    background-color: #a4a4a4;
+}
+
+.navbar-first {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hospital-name {
+    flex-wrap: nowrap;
+    color: black;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.hospital-name:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.navbar-second {
+    width: 70%;
+}
+
+.secondNavUl {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+
+}
+.navbar-second .nav-item{
+    list-style: none;
+}
+.addPateintButton{
+    font-size: 12px;
+    margin: 0;
+}
+.nav-item.dropdown>.nav-link .indicator {
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+    font-size: 10px;
+}
+#alertsDropdown,#messagesDropdown{
+    padding: 0;
+}
+.addpatient {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.navbar-third {
+    width: 15%;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(154, 157, 160);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 92vh;
+    /* 100% Full-height */
+    width: 57px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 888;
+    /* Stay on top */
+    top: 58px;
+    /* Stay at the top */
+    left: 0;
+    background-color: #ffffff;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar-sidenav>.nav-item>.nav-link {
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+    background-color: rgb(236, 236, 11);
+}
+
+.nav-link-text {
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+#exampleAccordion .nav-link i {
+    margin-left: 20px;
+}
+
+.sidenav-second-level li a {
+    font-size: 15px;
+}
+
+.alertDetails {
+    position: absolute;
+    top: 100%;
+    background-color: #ffffff;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 98;
+    padding: 16px;
+}
+
+.alertBodyitems {
+    background-color: transparent;
+    padding: 5px;
+}
+
+.alertBodyitems:hover {
+    background-color: #cce7ff;
+}
+
+.alertBodyitemsPart1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageAlertDetails {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 50;
+    padding: 16px;
+}
+
+.MadBodyitemsPart2 p {
+    font-size: 10px;
+}
+
+.MADBody {
+    height: 25vh;
+    min-height: 25vh;
+    overflow-y: scroll;
+}
+
+.adminSettingBox{
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 84%;
+    height: auto;
+    width: 16%;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 50;
+    padding: 16px;
+}
+.adminSettingBox p{
+    margin: 0;
+    padding: 0;
+}
+#settingOptions{
+    padding: 0;
+}
+#settingOptions li{
+    list-style: none;
+    font-size: 12px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+#settingOptions li:hover{
+    background-color: #cce7ff;
+    cursor: pointer;
+}
+.nav-link{
+    color: #818181;
+}
 main{
     display: flex;
 }
-.navbarForMob,#mobAllbtn,#showMsgDate,.angleDownMob,.showMsgDateMob,.callDate,.MobOptionsForMess,.sendingMsgBoxMob{
+.navbarForMob,#mobAllbtn,#showMsgDate,.angleDownMob,.showMsgDateMob,.callDate,.MobOptionsForMess,.sendingMsgBoxMob,#MobSettingBox,.fullscreen-container2{
     display: none;
 }
+.MobTagListBox,.attachOptionsMob{
+    display: none;
+}
+
+/* navbar for computer */
+
+
 .separator {
     display: flex;
     align-items: center;
@@ -33,6 +280,7 @@ main{
   .separator:not(:empty)::after {
     margin-left: .25em;
   }
+
 .custom-checkbox input[type="checkbox"],
 .custom-checkbox .checked {
 display: none;
@@ -50,6 +298,7 @@ display: none;
 
 ::-webkit-scrollbar {
     width: 3px;
+    height: 5px;
 }
       
       /* Track */
@@ -68,11 +317,13 @@ display: none;
 }    
 /* for chatting and calling list */
 .chatAndCallList{
+    display: block;
     width: 418px;
     height: 926px;
     border: 2px solid black;
     border-radius: 8px;
     overflow: scroll;
+    margin-top: 71px;
 }
 .part-1{
     height: 36px;
@@ -139,6 +390,9 @@ display: none;
     width: 393px;
     justify-content: space-around;
     overflow-y: scroll;
+}
+.waves {
+    height: 21px;
 }
 .chatListMethod ul{
     list-style: none;
@@ -247,9 +501,34 @@ display: none;
     box-shadow: 2px 2px 8px black;
 }
 /* pateint details & chat */
+.firstDisplay{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 71px;
+}
+.firstDisplay img{
+    width: 50%;
+    height: 50%;
+}
+#showAndhide{
+    color: #0004ff;
+    cursor: pointer;
+}
+#showAndhide:hover{
+    font-weight: bold;
+}
+#phaseForChatList{
+    color: #01A7CD;
+}
 .mainPart{
+    display: none;
+    flex-direction: column;
     height: 975px; 
     width: 100%;
+    margin-top: 71px;
 }
 .pateintDetails{
     display: flex;
@@ -262,6 +541,13 @@ display: none;
     display:flex;
     justify-content:center;
     align-items:center;
+}
+#backToCallList{
+    color: #b9b9b9;
+    margin: 0 7px;
+}
+#backToCallList:hover{
+    color: #000000;
 }
 .pateint-logo{
     display:flex;
@@ -278,6 +564,18 @@ display: none;
 }
 .patientDetailsPart{
     width: 55%;
+}
+#showingNumberBox{
+    text-decoration: none;
+}
+.callerNumber{
+    display: none;
+    color: black;
+    text-decoration: none;
+}
+.callerNumber:hover{
+    color: #007185;
+    font-weight: bold;
 }
 .details1{
     height: 50%;
@@ -319,13 +617,38 @@ display: none;
     display: flex;
     justify-content: space-around;
 }
-#followupButton{
+.chatTagsDisplayBox{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    max-height: 52px;
+    width: 130px;
+    overflow-y: scroll;
+}
+.chatTagsDisplayBox li{
+    list-style: none;
+}
+.chatTagsDisplayBox a{
+    display: flex;
+    justify-content: space-around;
+}
+.followupButton{
     font-size: 11px;
     background-color:#D7ECFF;
     border: 1px solid aqua;
     padding: 2px 4px;
     border-radius: 15px;
     text-decoration: none;
+    width: 100%;
+    margin: 2px 0;
+}
+.tagName{
+    color: #000000;
+}
+.tagName:hover{
+    color: #0004ff;
+    font-weight: bold;
 }
 #editButton{
     font-size: 13px;
@@ -345,11 +668,15 @@ display: none;
     font-size: 12px;
 }
 .backBlue{
-    background-color: #BFF5E8;
-    color: #4BC0A4;
     display: inline;
     padding: 5px;
     border-radius: 50%;
+}
+.backBlue a{
+    color: #007185;
+}
+.backBlue a:hover{
+    color: #01DA4D;
 }
 .moreIcon{
     background-color: #E2E2E2;
@@ -406,7 +733,7 @@ display: none;
     left:65%;
     /* top: 69px; */
     background: #313131;
-    border: 1px solid #FFFFFF;
+    border: 2px double #ffffff;
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -441,6 +768,8 @@ display: none;
 .callBoxesOptions{
     display: flex;
     justify-content: space-around;
+    padding: 0;
+    margin: 0;
 }
 .callOptionBox{
     list-style: none;
@@ -453,30 +782,34 @@ display: none;
     color: white;
 }
 .callOptionBox a{
-    border: 1px solid white;
     border-radius: 50%;
     width: 50px;
-    border: 0.5px solid #FFFFFF;
+    border: 0.5px solid #9c9c9c;
     box-sizing: border-box;
     padding: 5px;
+}
+#openDateBox{
+   color: #009db8;
+}
+#openDateBox:hover{
+   color: #003842;
 }
 .callOptionBox a i{
     color: white;
     font-size: 12px;
     margin: 5px;
-
 }
 .callEndBox{
     background-color: #FF0000;
     border: none;
     cursor: pointer;
 }
+
 #ui-datepicker-div{
     display: none;
 }
 /*  <!-- pateint details & chat --> */
-.openReminderBox{
-        display: none;
+.DateChooseBox{
         max-width: 330px;
         height: 274px;
         width: 330px;
@@ -485,8 +818,8 @@ display: none;
         box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
         border-radius: 15px;
         position: absolute;
-        top: 0;
-        left:50%;
+        top: 5%;
+        left:30%;
         z-index: 8;
 }
 .showToday{
@@ -550,8 +883,18 @@ display: none;
 }
 .chooseDate{
     position: relative;
-    display: inline;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid black;
+    width: 120px;
+    height: 30px;
     left: 40%;
+}
+.chooseDate p{
+   margin: 0;
+   padding: 0;
 }
 
 .msgBox{
@@ -825,15 +1168,17 @@ display: none;
 .sendingMsgBox{
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     height: 25%;
+    margin-top: 0;
 }
-.sendingMsgBox a{
+.sendingMsgBox #attachFile{
     background-color: #EBFFE5;
     padding: 8px;
     border-radius: 50%;
 }
-.sendingMsgBox a:nth-child(2){
+.sendingMsgBox #submitBtn{
     background-color: #FFE3E3;
 }
 .send-container{
@@ -850,3 +1195,450 @@ display: none;
     padding: 0 10px;
     height: 38px;
 }
+.attachOptions{
+    position: absolute;
+    z-index: 9;
+    left: 4%;
+   bottom: 56px;
+}
+.optionInAttaching{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #007185;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+.optionInAttaching:hover{
+    color: #007185;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.attachFileFromGall{
+    display: flex;
+    width: 100%;
+    
+}
+#openAttachImageBox,#openAttachFileBox {
+    background: rgb(255, 255, 255);
+    /* border: 0.01em solid black; */
+    box-shadow: 9px 15px 30px -5px rgb(46 46 46 / 75%);
+    -webkit-box-shadow: 9px 15px 30px -5px rgb(46 46 46 / 75%);
+    -moz-box-shadow: 9px 15px 30px -5px rgba(46,46,46,0.75);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    margin: 2px 5px;
+    font-size: 14px;
+    left: 9%;
+    width: 70%;
+    height: 44px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 5;
+    bottom: 150px;
+}
+#openAttachFileBox{
+    bottom: 204px;
+}
+.showClouds{
+    display: flex;
+}
+#cloudBox {
+    display: flex;
+    flex-direction: column;
+    z-index: 7;
+    position: relative;
+    max-width: 683px;
+    width: 26vw;
+    bottom: 500px;
+    left: 13%;
+    max-height: 550px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 5px rgb(0 0 0 / 25%);
+    border-radius: 15px;
+}
+
+.CIDBox{
+    border-bottom: 1px solid black;
+}
+.cloudImages img{
+    width: 15%;
+}
+.cloudFooter{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#cancleCloudSave{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#cancleCloudSave:hover{
+    color: #000000;
+    background: #FFCD1E;
+}
+#doneCloudSave{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    background: #FFCD1E;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+#doneCloudSave:hover{
+    background: #FFFFFF;
+    color: black;
+}
+/* camera opening */
+#cameraBox{
+    display: flex;
+    flex-direction: column;
+    z-index: 7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    margin: auto;
+    height: 100vh;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 5px rgb(0 0 0 / 25%);
+    border-radius: 15px;
+}
+#video,#canvas{
+    width: 320px;
+    height: 240px;
+    margin: 10px 0;
+}
+.cameraBoxHead{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+.CameraBoxopen{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+#canvas{
+    max-width: 320px;
+    margin: 10px auto;
+}
+.searchMsgsBox{
+    position: absolute;
+    max-width: 881px;
+    height: 123px;
+    width: 80%;
+    top: 100%;
+    left: 10%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 8;
+}
+.seachBoxMsgs{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.searchMsgsBox input{
+   width: 95%;
+   border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 7px;
+}
+.lineDivider{
+    margin: 0;
+}
+.linkForSendAnother{
+    color: #007185;
+}
+.extraInfo p{
+    padding: 5px;
+    font-size: 12px;
+}
+#mediaBox{
+    position: absolute;
+    max-width: 1000px;
+    height: 250px;
+    width: 90%;
+    top: 100%;
+    left:6%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 8;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:auto;
+    border: 7px double gray;
+}
+.imagesMedia,.linkMedia,.pdfMedia {
+    background: #FFFFFF;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 1px 7px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 1px 7px -4px rgba(0,0,0,0.75) ;
+-moz-box-shadow: 2px 1px 7px -4px rgba(0,0,0,0.75) ;
+}
+.imagesMedia img{
+    max-width: 200px;
+    width: 8vw;
+    height: 8vw;
+}
+.imagesMedia{
+    padding: 10px;
+}
+.linkMedia {
+    width: 40%;
+    height: auto;
+    max-height: 100%;
+    padding: 4px 6px;
+}
+.imgAndHead{
+    display: flex;
+}
+.imgAndHead p,.linkOfPerticularMedia{
+    font-size: 13px;
+}
+.pdfMedia {
+    width: 20%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+/* adding a notes */
+#addNoteBox{
+    position: absolute;
+    max-width: 282px;
+    height: 260px;
+    border-radius: 8px;
+    width: 50%;
+    top: 100%;
+    left:35%;
+    z-index: 10;
+    background: #ffffff;
+    -webkit-box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+    box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+    }
+.writingNoteBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#writingNote{
+    resize: none;
+    outline: none;
+    width: 90%;
+    padding: 5px;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#checkTheChar{
+    position: relative;
+    left:22%;
+}
+/* tag edition box popUp */
+#tagEditionBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    max-width: 282px;
+    height: 130px;
+    border-radius: 8px;
+    width: 50%;
+    top: 100%;
+    left:35%;
+    z-index: 10;
+    background: #ffffff;
+    -webkit-box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+    box-shadow: 10px 13px 24px 3px rgba(0,0,0,0.75);
+}
+.tagEditionDetailPart1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50%;
+    justify-content: space-between;
+}
+#editTagName{
+    outline: none;
+    height: 100%;
+    resize: none;
+    border: none;
+}
+#editButtonTag{
+    color: #8a8a8a;
+}
+#editButtonTag:hover{
+    color:#007185;
+}
+#applyTagEdit{
+    float: right;
+    margin: 10px;
+}
+.tagBox{
+    position: absolute;
+    max-width: 881px;
+    height: 123px;
+    width: 90%;
+    top: 100%;
+    left: 6%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    z-index: 8;
+}
+.tags{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    
+    height: 50%;
+    overflow: scroll;
+}
+.tags li{
+    list-style: none;
+    border-bottom: 1px solid rgb(136, 136, 136);
+}
+.tagCheck{
+    margin-left: 5px;
+}
+.TagCreationBox{
+    display: flex;
+    align-items: center;
+    height: 40%;
+}
+.TagCreationBox form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createTags{
+    background-color: #01A7CD;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.createTags:hover{
+    color: #01A7CD;
+    background-color: #FFFFFF;
+    border: 1px solid #01A7CD;
+}
+#manageButton{
+    cursor: pointer;
+    text-decoration: none;
+}
+#createTagButton,#manageButton,#applyTagInBox{
+    font-size: 14px;
+}
+#createTagButton{
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+#createTagButton:hover{
+    background: #01A7CD;
+    color: #ffffff;
+   
+}
+.TagCreationBoxPart1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#showErrorTag{
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
+}
+/* for giving call option popup */
+.fullscreen-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(31, 31, 31, 0.5);
+    /* background-color: #FFFFFF; */
+    z-index: 9999;
+}
+#popDiv {
+    height: 80px;
+    width: 41vw;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+  .popDiv h4{
+    font-weight: 600;
+    font-size: 20px;
+  }
+  #but1,#but2{
+    background: #FFFFFF;
+    border: 1px solid #1CB5C6;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 3px 12px;
+    margin: 0 5px;
+  }
+  #but1:hover,#but2:hover{
+    background: #1CB5C6;
+    color: #ffffff;
+  }
+  .fullscreen-container2{
+      display: none ;
+  }
+  #inputLabelMob{
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+    height: 31px;
+  }
+

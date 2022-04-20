@@ -8,12 +8,44 @@ p{
 main aside,.angleDownDesk,.Starred,.separator{
     display: none;
 }
+header{
+    position: absolute;
+    top: 0;
+}
+.navForDeskTop{
+    display: none;
+}
+/* navbar */
+
+.navbar-sidenav>.nav-item>.nav-link {
+    font-size: 15px;
+}
+#mySidenav {
+    width: 0px;
+    border: none;
+    background-color:#efefef;
+}
+.nav-link-text{
+    font-size: 14px;
+}
 .patientName a,.patientAddress,#voiceCall,#searchMsg,#media,.divider,.additionalDetailPart{
    display: none;
+}
+.mainPart,#mediaBox,#searchMsgsBox,.fullscreen-container {
+    display: none;
+}
+.firstDisplay{
+    display: none !important;
+}
+#tagBox{
+    display: none;
 }
 main{
     display: block;
 }
+/* .mainPart{
+    display: none;
+} */
 .chatAndCallList{
     width: 98%;
     border: none;
@@ -23,11 +55,15 @@ main{
 .navbarForMob{
     display: flex;
     border-top: 1px solid black;
-    position: relative;
-    height: 100%;
+    /* position: relative; */
+    width: 100vw;
+    height: 70px;
     border-bottom: 1px solid black;
+    z-index: 999;
+    background-color: white;
 }
 .MobOptionBox{
+    display: flex;
     position: absolute;
     right: 20%;
     top: 45%;
@@ -79,6 +115,9 @@ main{
     display: flex;
     height: 100%;
     align-items: center;
+}
+.patientLogoPart a{
+    display: inline-block;
 }
 #mobAllbtn{
     display: inline-block;
@@ -148,7 +187,7 @@ width: 33%;
     height: 100vh;
 }
 .pateintDetails{
-    height: 9%;
+    height: 12%;
 }
 .MobOptionsForMess{
     display: flex;
@@ -231,3 +270,235 @@ width: 33%;
     outline: none;
     width: 90%;
 }
+#MobSettingBox {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 30%;
+    top: 20%;
+    max-width: 109px;
+    left: 70%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+}
+#MobSettingBox ul{
+    padding: 10px;
+}
+#MobSettingBox ul li{
+    list-style: none;
+    border-bottom: 1px solid black;
+    font-size: 12px;
+}
+#MobSettingBox ul li:hover{
+    background-color: #0000002c;
+}
+/* open div when tag creation*/
+.fullscreen-container2{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(52, 52, 52, 0.5);
+    /* background-color: #FFFFFF; */
+    z-index: 9999;
+}
+.createLabelBoxMob{
+    max-height: 250px;
+    height: 37vh;
+    width: 41vw;
+    background-color: #ffffff;
+    position: fixed;
+    top: 35%;
+    left: 33%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    z-index: 5;
+}
+.headIncreateLabelBox{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.bodyInCreateLabelBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#tagsOptionForMob {
+    max-height: 250px;
+    height: 37vh;
+    width: 41vw;
+    background-color: #ffffff;
+    position: fixed;
+    top: 35%;
+    left: 33%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+.tagsOptionForMobHead{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.tagsOptionForMobHead a,.tagsOptionForMobHead p{
+    font-size: 13px;
+}
+.tagsListInMob{
+    border-top: 1px solid rgb(198, 198, 198);
+    border-bottom: 1px solid rgb(198, 198, 198);
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.tagsListInMob li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tagsListInMob li a{ 
+    width: 70%;
+}
+#btnForApplyInMob{
+    border-radius: 5px;
+}
+#popUpCreatedMsg{
+    color: #00A455;
+    display: none;
+}
+#showErrorMob{
+    color: #ff0101;
+    display: none;
+}
+#createTagInMobBtn,#manageInMob{
+    text-decoration: underline;
+    color:#0055a4;
+}
+
+.MobTagListBox{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 7;
+    width: 30%;
+    top: 70%;
+    max-width: 125px;
+    max-height: 150px;
+    overflow-y: scroll;
+    left: 68%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+}
+#chatTagDisplayBoxMob{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+#chatTagDisplayBoxMob li{
+    list-style: none;
+    width: 100%;
+}
+#chatTagDisplayBoxMob li a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* add notes  */
+#addNoteBox {
+    max-width: 230px;
+    width: 50%;
+    top: 100%;
+    left: 38%;
+    z-index: 3;
+    background: #ffffff;
+    -webkit-box-shadow:4px 5px 15px 1px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 4px 5px 15px 1px rgb(0 0 0 / 75%);
+    box-shadow: 4px 5px 15px 1px rgb(0 0 0 / 75%);
+}
+.attachOptionsMob{
+    position: absolute;
+    bottom: 2px;
+    right: 16%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000b3;
+    border-radius: 30px;
+    padding: 2px 3px;
+    z-index: 5;
+}
+.optionInAttachingMob{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #007185;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+.optionInAttachingMob:hover{
+    color: #007185;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+#openAttachImageBox,#openAttachFileBox {
+    position: absolute;
+    left: 7%;
+    bottom: 55px;
+}
+#openAttachFileBox{
+    bottom: 103px;
+}
+#cloudBox {
+    width: 44vw;
+    bottom: 10px;
+    position: absolute;
+    left: 30%;
+}
+
+/* calling box design */
+.callingBox {
+    left: 59%;
+    height: 32vh;
+    width: 39%;
+}
+.callOptionBox a {
+    width: 38px;
+    padding: 3px;
+}
+.callOptionBox a i {
+    font-size: 9px;
+}
+#callSettingBox {
+    left: 63%;
+
+}
+.mP {
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.callSettingoption, .audioSettingoption {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
