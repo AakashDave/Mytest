@@ -1042,14 +1042,26 @@ cancleIncreateLabelBox.addEventListener("click",()=>{
 
 // // refresh the page only if you're crossing into a context
 // // that isn't already set
-$(window).resize(function() {
-    if(($(window).width() <= 767)) {
-        window.location.reload();
-        $(".mainPart").css({
-            'display':"none"
-        })
+$(document).ready(function(){
+    //Set flag refresh to true
+    var refresh = true;
+    //If the window width is between wanted limit set flag to false. This is needed for the resize*.
+    if ($(window).width() < 768) {
+      refresh = false;
     }
+    $(window).resize( function(){
+    /* When resize hits limits check if flag is true, then refresh.
+    Flag is set to false from above*, after refresh.
+    Time is needed for the page to load and set the flag to false.
+    Otherwise flag is not updated and constant refresh keeps happening while resizing. */
+    if ($(window).width() < 768 ) {
+      if (refresh == true) location.reload();
+    } else {
+        refresh = true;
+    }
+  });
 });
+
 
 /* tag creation in mob */
 let createTagMob=document.getElementById("createTagMob");
